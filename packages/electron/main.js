@@ -6,7 +6,11 @@ const createWindow = () => {
     height: 600,
   });
 
-  win.loadURL("http://localhost:5173/");
+  if (process.env.ELECTRON_DEV === "true") {
+    win.loadURL("http://localhost:5173/");
+  } else {
+    win.loadFile("dist/index.html");
+  }
 };
 
 app.whenReady().then(() => {

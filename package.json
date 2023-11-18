@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspace my-acs-ui\" \"npm start --workspace my-acs-electron\""
+    "dev": "cross-env ELECTRON_DEV=true npx concurrently \"npm run dev --workspace my-acs-ui\" \"npm start --workspace my-acs-electron\""
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,7 @@
   ],
   "devDependencies": {
     "concurrently": "8.2.2",
+    "cross-env": "^7.0.3",
     "prettier": "3.1.0"
   }
 }
