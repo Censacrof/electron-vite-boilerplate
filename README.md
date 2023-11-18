@@ -18,5 +18,3 @@ npm run package
 # make
 npm run make
 ```
-
-### Start develompent server with hot module reload
