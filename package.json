@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "preview": "npm --workspace my-project-ui run build && shx rm -rf packages/electron/dist && shx cp -r packages/ui/dist packages/electron && npm --workspace my-project-electron start",
-    "dev": "cross-env ELECTRON_DEV=true npx concurrently -n \"  vite  ,electron\" \"npm --workspace my-project-ui run dev\" \"npm --workspace my-project-electron start\""
+    "build": "npm --workspace my-project-ui run build && shx rm -rf packages/electron/dist && shx cp -r packages/ui/dist packages/electron",
+    "preview": "npm run build && npm --workspace my-project-electron start",
+    "dev": "cross-env ELECTRON_DEV=true npx concurrently -n \"  vite  ,electron\" \"npm --workspace my-project-ui run dev\" \"npm --workspace my-project-electron start\"",
+    "package": "npm run build && npm --workspace my-project-electron run package",
+    "make": "npm run build && npm --workspace my-project-electron run make"
   },
   "author": "",
   "license": "ISC",

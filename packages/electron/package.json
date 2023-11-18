@@ -1,14 +1,14 @@
 {
   "name": "my-project-electron",
   "version": "1.0.0",
-  "description": "",
+  "description": "Something",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
   },
-  "author": "",
+  "author": "Someone",
   "license": "ISC",
   "devDependencies": {
     "@electron-forge/cli": "^7.1.0",
